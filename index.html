@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="ShopQuynhArtist,shopuytin,shop24/7">
+
+    <title>Trang Web Ban Hang 24/7</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="css/typo/typo.css"/>
+    <link rel="stylesheet" href="css/hc-canvas-luckwheel.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="data.js"></script>
+    <script src="js/product.js"></script>
+    <script src="manage-product.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .hc-luckywheel {
+            left: 50%;
+        }
+    </style>
+</head>
+<body>
+<img src="https://thumbs.gfycat.com/CarelessDopeyDartfrog-size_restricted.gif" alt="Anh gif welcome" width="430"
+     height="500" style=" position: relative; left: -10 px; width: 1500px; height: 850px;">
+<!--<img src="https://gameviet.mobi/wp-content/uploads/2019/12/Ngo-Khong-lien-quan-mobile-gameviet.mobi-2.jpg"  alt="Anh gif welcome" width="760px" height="500" >-->
+<img src="https://i.pinimg.com/originals/c0/64/0c/c0640cd6d457349ee590188a4c58bd9d.gif" alt="Anh gif welcome"
+     style=" width:1500px; height:600px">
+
+<div id="myDIV">
+    <h1> Shop Quỳnh Artist </h1>
+    <br/><br/>
+    <h3> Chào Mừng Quý Khách Đến Với Cửa Hàng </h3>
+</div>
+<button class="btn btn-success" type="button" style="font-size: larger; position: absolute; top: -10px" onclick="window.location.reload()">Trang Chủ</button>
+<p id="home"></p>
+<br/><br/>
+<label for="money" style="color: aquamarine;position: absolute;top: 710px;right: 330px;"> Chọn Loại Thẻ : </label>
+<select name="money" id="money" style="position: absolute;top: 710px;right: 80px;">
+    <option value="">-- Chọn đúng loại thẻ. Sai mất thẻ --</option>
+    <option value="Viettel">VIETTEL</option>
+    <option value="Mobiphone">MOBIPHONE</option>
+    <option value="Vinaphone">VINAPHONE</option>
+    <option value="Vietnammobile">VIETNAMMOBILE</option>
+    <option value="Zing">ZING</option>
+</select>
+<br/>
+<br/>
+
+<label for="cost" style="color: aquamarine;position: absolute;top: 810px;right: 330px;"> Chọn Giá Trị Của Thẻ:</label>
+<select name="cost" id="cost" style="position: absolute;top: 810px;right: 68px;">
+    <option value="">-- Chọn đúng mệnh giá. Sai mất thẻ --</option>
+    <option value="20.000d">20.000d</option>
+    <option value="50.000d">50.000d</option>
+    <option value="100.000">100.000d</option>
+    <option value="200.000d">200.000d</option>
+    <option value="500.000d">500.000d</option>
+    <option value="1.000.000d">1.000.000d</option>
+</select>
+
+<br/>
+<br/>
+
+<button class="btn btn-success" onclick="checkCard()" style="   position: absolute;top: -3px; left: 260px;">NẠP THẺ</button>
+<p id="check">.</p>
+
+<button class="btn btn-success" type="button" onclick="document.getElementById('demo').innerHTML = Date()" style=" position: absolute; left: 620px;" >Đây Là Nút Xem Giờ...Nhé!!!</button>
+<p id="demo" style="text-align: center ;font-family: 'Oleo Script Swash Caps',fantasy ; font-size:30px ; color: aquamarine;position: absolute;top: 100px;left: 400px;"></p>
+
+<!--<audio controls autoplay>-->
+<!--    <source src="../file/bell.mp3" type="audio/mpeg">-->
+<!--</audio>-->
+
+<button class="btn btn-success" onclick="document.getElementById('id01').style.display='block'" style="width:200px;position: absolute;left: 1221px;">Đăng Ký</button>
+<div id="id01" class="modal" style="z-index: 100">
+    <form class="modal-content" action="/action_page.php"><br>
+        <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">Đóng</span>
+        <div align="center" class="box-img">
+            <img src="https://i.pinimg.com/564x/48/5f/b6/485fb6b2aafbbfae7b2131a1f9f5688f.jpg" width="300" height="400" alt="Avatar for SignUp">
+        </div>
+        <h1 style="color: burlywood; text-align: center;font-size: xxx-large ;top: 450px;right: 5px; font-family: 'Oleo Script Swash Caps',serif">Đăng Ký Đi Ngại Gì </h1>
+        <div class="container">
+            <p style="text-align: center; color: burlywood;">Hãy Điền Đầy Đủ Thông Tin Vào Phiếu Sau.</p>
+            <hr>
+            <label for="email"><b>Nhập Email</b></label>
+            <input type="text" placeholder="Nhập Email" name="email" required>
+
+            <label for="psw"><b>Mật Khẩu</b></label>
+            <input type="password" placeholder="Mật Khẩu" name="psw" required>
+
+            <label for="psw-repeat"><b>Nhập lại Mật Khẩu</b></label>
+            <input type="password" placeholder="Nhập lại Mật Khẩu" name="psw-repeat" required>
+
+            <label>
+                <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Nhớ Tài Khoản Của
+                Tôi</label>
+            <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+            <div class="clearfix">
+                <button type="submit" class="signupbtn" style="inline-size :-webkit-fill-available; width: 1118px">Đăng Ký Tài Khoản</button>
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Thôi,Có Tài Khoản Rồi Không Đăng Ký Nữa!!!!</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<br/><br/>
+<button class="btn btn-success" onclick="document.getElementById('id02').style.display='block'" style="width:200px;position: absolute;left: 975px;">Đăng Nhập</button>
+<div id="id02" class="modal" style="z-index: 100">
+
+    <form class="modal-content animate" action="/action_page.php" method="post">
+        <div class="imgcontainer">
+            <img src="https://i.pinimg.com/originals/fe/ba/ea/febaeafc6efd90e86e1dc26f3ae6c3f9.jpg" width="500"
+                 height="400" alt="Avatar" class="avatar">
+            <h1 style=" color: burlywood; text-align: center ;font-size: xxx-large ; top: 295px ; left: 660px">Đăng Nhập</h1>
+        </div>
+
+        <div class="container">
+            <label for="uname"><b>Tên Đăng Nhập</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+
+            <label for="psw"><b>Mật Khẩu</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+
+            <button type="submit">Đăng Nhập</button>
+            <label>
+                <input type="checkbox" checked="checked" name="remember"> Nhớ Tài Khoản Của Tôi</label>
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Thôi,Không Đăng Nhập Nữa</button>
+            <span class="psw">Quên Mật Khẩu <a href="#">password?</a></span>
+        </div>
+    </form>
+</div>
+<div align="center">
+    <form style="align-items: center" id="form-add" class="form-group">
+        <fieldset style="position: absolute; top: 700px; left: 40px">
+            <legend style="width: 340pxs ; color: royalblue">ADD PRODUCT</legend>
+            <input class="form-control" id="product-name" placeholder="Product Name">
+            <input class="form-control" id="product-price" placeholder="Product Price">
+            <input class="form-control" id="product-color" placeholder="Product Color">
+            <button type="button" class="btn btn-success" onclick="addProduct()">Add</button>
+        </fieldset>
+    </form>
+</div>
+<form id="form-edit" class="form-group" style="display: none">
+    <fieldset>
+        <legend>EDIT PRODUCT</legend>
+        <input class="form-control" id="edit-name" placeholder="Product Name">
+        <input class="form-control" id="edit-price" placeholder="Product Price">
+        <input class="form-control" id="edit-color" placeholder="Product Color">
+        <button type="button" class="btn btn-success" onclick="editProduct()">Save</button>
+    </fieldset>
+</form>
+
+<div id="product-manage">
+    <script>
+        let shop = new ProductManage(" Shop Artist ");
+        shop.init();
+        display(shop.getHtml());
+        let currentProduct = 0;
+
+        function display(table) {
+            document.getElementById('product-manage').innerHTML = table;
+            Data.saveData(store.products, PRODUCT);
+        }
+
+        function addProduct() {
+            let name = document.getElementById("product-name").value;
+            let price = document.getElementById("product-price").value;
+            let color = document.getElementById("product-color").value;
+
+            let product = new Product(name, price, color);
+
+            shop.addProduct(product);
+            display(shop.getHtml());
+            document.getElementById('form-add').reset();
+        }
+
+        function edit(index) {
+            document.getElementById('form-edit').style.display = "inline-block";
+            let product = store.getProductByIndex(index);
+            document.getElementById('edit-name').value = product.name;
+            document.getElementById('edit-price').value = product.price;
+            document.getElementById('edit-color').value = product.color;
+            currentProduct = index;
+        }
+
+        function editProduct() {
+            let name = document.getElementById("edit-name").value;
+            let price = document.getElementById("edit-price").value;
+            let color = document.getElementById("edit-color").value;
+
+            shop.products[currentProduct].edit(name, price, color);
+            display(shop.getHtml());
+            document.getElementById('form-edit').reset();
+            document.getElementById('form-edit').style.display = "none";
+        }
+
+        function del(index) {
+            shop.deleteProduct(index);
+            display(store.getHtml());
+        }
+
+        function checkCard() {
+            document.getElementById('check').value = alert('Ban Da Nap The Thanh Cong Vao Tai Khoan');
+        }
+
+        // Get the modal
+        let modal = document.getElementById('id01');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+        // Get the modal
+        let modal = document.getElementById('id02');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</div>
+<br/> <br/>
+<div class="wrapper typo" id="wrapper">
+    <section id="luckywheel" class="hc-luckywheel" style="position: absolute; top: 1700px ; left: 1100px">
+        <div class="hc-luckywheel-container">
+            <canvas class="hc-luckywheel-canvas" width="500px" height="500px">Vòng Xoay May Mắn</canvas>
+        </div>
+        <a class="hc-luckywheel-btn" href="javascript:;">Quay</a>
+    </section>
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+<script src="js/hc-canvas-luckwheel.js"></script>
+<script>
+    let isPercentage = true;
+    let prizes = [
+        {
+            text: "C1",
+            img: "https://i.pinimg.com/564x/83/36/6c/83366c5bfcbf772c86599347e67ed98c.jpg",
+            number: 1, // 1%,
+            percentpage: 0.01 // 1%
+        },
+        {
+            text: "C2",
+            img: "https://i.pinimg.com/564x/e7/a5/a8/e7a5a8f3f26a0e0f186e92f7b7576c9b.jpg",
+            number: 1,
+            percentpage: 0.5 // 50%
+        },
+        {
+            text: "C3",
+            img: "https://i.pinimg.com/564x/8d/bb/6c/8dbb6cbfcadc60361b7230bf14027f50.jpg",
+            number: 1,
+            percentpage: 0.1 // 10%
+        },
+        {
+            text: "C4",
+            img: "https://i.pinimg.com/564x/7f/bc/34/7fbc347ecba69ef1ee90dde5a14c269e.jpg",
+            number: 1,
+            percentpage: 0.24 // 24%
+        },
+        {
+            text: "Chúc bạn may mắn lần sau",
+            img: "https://i.pinimg.com/236x/7d/6e/62/7d6e6291f08525fdf0e3bec8ee9d189a.jpg",
+            percentpage: 0.06 // 6%
+        },
+    ];
+    document.addEventListener(
+        "DOMContentLoaded",
+        function () {
+            hcLuckywheel.init({
+                id: "luckywheel",
+                config: function (callback) {
+                    callback &&
+                    callback(prizes);
+                },
+                mode: "both",
+                getPrize: function (callback) {
+                    let rand = randomIndex(prizes);
+                    let chances = rand;
+                    callback && callback([rand, chances]);
+                },
+                gotBack: function (data) {
+                    if (data == null) {
+                        Swal.fire(
+                            'Chương trình kết thúc',
+                            'error'
+                        )
+                    } else if (data === 'Toang.. Lại Đi !!!') {
+                        Swal.fire(
+                            'Trượt Rồi, Lại Đi',
+                            data,
+                            'error'
+                        )
+                    } else {
+                        Swal.fire(
+                            'Trúng Rồi, Lại Đi!!',
+                            data,
+                            'success'
+                        )
+                    }
+                }
+            });
+        },
+        false
+    );
+
+    function randomIndex(prizes) {
+        if (isPercentage) {
+            let counter = 1;
+            for (let i = 0; i < prizes.length; i++) {
+                if (prizes[i].number === 0) {
+                    counter++
+                }
+            }
+            if (counter === prizes.length) {
+                return null
+            }
+            let rand = Math.random();
+            let prizeIndex = null;
+            console.log(rand);
+            switch (true) {
+                case rand < prizes[4].percentpage:
+                    prizeIndex = 4;
+                    break;
+                case rand < prizes[4].percentpage + prizes[3].percentpage:
+                    prizeIndex = 3;
+                    break;
+                case rand < prizes[4].percentpage + prizes[3].percentpage + prizes[2].percentpage:
+                    prizeIndex = 2;
+                    break;
+                case rand < prizes[4].percentpage + prizes[3].percentpage + prizes[2].percentpage + prizes[1].percentpage:
+                    prizeIndex = 1;
+                    break;
+                case rand < prizes[4].percentpage + prizes[3].percentpage + prizes[2].percentpage + prizes[1].percentpage + prizes[0].percentpage:
+                    prizeIndex = 0;
+                    break;
+            }
+            if (prizes[prizeIndex].number !== 0) {
+                prizes[prizeIndex].number = prizes[prizeIndex].number - 1
+                return prizeIndex
+            } else {
+                return randomIndex(prizes)
+            }
+        } else {
+            let counter = 0;
+            for (let i = 0; i < prizes.length; i++) {
+                if (prizes[i].number === 0) {
+                    counter++
+                }
+            }
+            if (counter === prizes.length) {
+                return null
+            }
+            let rand = (Math.random() * (prizes.length)) >>> 0;
+            if (prizes[rand].number !== 0) {
+                prizes[rand].number = prizes[rand].number - 1
+                return rand
+            } else {
+                return randomIndex(prizes)
+            }
+        }
+    }
+</script>
+</html>
