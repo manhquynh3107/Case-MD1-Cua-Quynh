@@ -15,39 +15,29 @@ class Product {
         this._price = value;
     }
 
-    get color() {
-        return this._color;
+    get type() {
+        return this._type;
     }
 
-    set color(value) {
-        this._color = value;
+    set type(value) {
+        this._type = value;
     }
 
-    get desc() {
-        return this._desc;
-    }
-
-    set desc(value) {
-        this._desc = value;
-    }
-    constructor(name,price,color,desc) {
+    constructor(name,price,type) {
         this._name = name;
         this._price = price;
-        this._color = color;
-        this._desc = desc;
-    }
+        this._type = type;
+           }
 
-    edit(name,price,color,desc){
+    edit(name,price,type){
         this.name = name;
         this.price = price;
-        this.color = color;
-        this.desc = desc;
-    }
+        this.type = type;
+           }
     getHtml(){
         let html = `<td>${this.name}</td>
                     <td>${this.price}</td>
-                    <td>${this.color}</td>
-                    <td>${this.desc}</td>`;
+                    <td>${this.type}</td>`;
         return html;
     }
 }

@@ -280,7 +280,9 @@ span.psw {
 input {
     margin-bottom: 10px;
 }
-
+.hc-luckywheel {
+    left: 50%;
+}
 body {
-    background-image: url("https://i.pinimg.com/originals/24/02/b8/2402b8d9fea7f1fb826cf3a6dd263bff.gif");
+    background-image: url("https://i.pinimg.com/originals/e2/ff/95/e2ff95522105559ef66f334bfad62010.gif");
 }

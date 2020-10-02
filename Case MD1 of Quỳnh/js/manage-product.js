@@ -10,7 +10,7 @@ class ProductManage {
         this.data = Data.products;
         console.log(this.data);
         for (let i = 0; i < this.data.length; i++) {
-            let product = new Product(this.data[i]._name,this.data[i]._price,this.data[i]._color,this.data[i]._desc);
+            let product = new Product(this.data[i]._name,this.data[i]._price,this.data[i]._type);
             this.addProduct(product);
         }
     }
@@ -18,8 +18,8 @@ class ProductManage {
     addProduct(product){
         this.products.push(product);
     }
-    editProduct(product,name,price,color,desc){
-        product.edit(name,price,color,desc);
+    editProduct(product,name,price,type){
+        product.edit(name,price,type);
     }
     deleteProduct(index){
         this.products.splice(index,1);
@@ -29,7 +29,7 @@ class ProductManage {
                         <tr>
                             <th>Name</th>
                             <th>Price</th>
-                            <th>Color</th>
+                            <th>Type</th>
                         </tr>`;
         for (let i = 0; i < this.products.length; i++) {
             table += "<tr>"+this.products[i].getHtml() + this.getAction(i)+'</tr>';
@@ -39,8 +39,8 @@ class ProductManage {
     }
 
     getAction(index){
-        let action = `<td><button class="btn btn-warning btn-md" onclick="edit(${index})">Edit</button></td>
-                        <td><button class="btn btn-danger btn-md" onclick="del(${index})">Delete</button></td>`;
+        let action = `<td><button class="btn btn-warning btn-md" style="width: 36px" onclick="edit(${index} )">Detail</button></td>
+                        <td><button class="btn btn-danger btn-md" style="width: 36px" onclick="del(${index} )">Buy</button></td>`;
         return action;
     }
 

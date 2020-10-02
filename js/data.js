@@ -4,14 +4,14 @@ class Data {
     static users =[];
     static products=[];
     static PRODUCTS = [
-        {name:"Iphone",price:1000,color:"Black",desc:"Apple"},
-        ["Iphone1",2000,"Black","Apple2"],
-        ["Iphone2",3000,"Black","Apple3"]
+        {name:"Iphone",price:1000,type:"Smartphone"},
+        ["Iphone1",2000,"9.0"],
+        ["Iphone2",3000,"9.1"]
     ];
     static USERS = [
-        ["Iphone",1000,"Black","Apple"],
-        ["Iphone1",2000,"Black","Apple2"],
-        ["Iphone2",3000,"Black","Apple3"]
+        ["Iphone",1000,"10.1"],
+        ["Iphone1",2000,"10.1"],
+        ["Iphone2",3000,"10.1"]
     ];
 
     static saveData(data,name){

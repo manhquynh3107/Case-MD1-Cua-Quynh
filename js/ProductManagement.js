@@ -17,7 +17,7 @@ class ProductManagement {
                         <tr>
                             <th>ID</th>
                             <th>NAME</th>
-                            <th>PRICE</th>
+                            <th>TYPE</th>
                           
                         </tr>
                    </table>`;

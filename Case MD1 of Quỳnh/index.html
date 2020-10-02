@@ -13,15 +13,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src="data.js"></script>
+    <script src="js/data.js"></script>
     <script src="js/product.js"></script>
-    <script src="manage-product.js"></script>
+    <script src="js/manage-product.js"></script>
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        .hc-luckywheel {
-            left: 50%;
-        }
-    </style>
 </head>
 <body>
 <img src="https://thumbs.gfycat.com/CarelessDopeyDartfrog-size_restricted.gif" alt="Anh gif welcome" width="430"
@@ -35,7 +30,9 @@
     <br/><br/>
     <h3> Chào Mừng Quý Khách Đến Với Cửa Hàng </h3>
 </div>
-<button class="btn btn-success" type="button" style="font-size: larger; position: absolute; top: -10px" onclick="window.location.reload()">Trang Chủ</button>
+<button class="btn btn-success" type="button" style="font-size: larger; position: absolute; top: -10px"
+        onclick="window.location.reload()">Trang Chủ
+</button>
 <p id="home"></p>
 <br/><br/>
 <label for="money" style="color: aquamarine;position: absolute;top: 710px;right: 330px;"> Chọn Loại Thẻ : </label>
@@ -64,25 +61,35 @@
 <br/>
 <br/>
 
-<button class="btn btn-success" onclick="checkCard()" style="   position: absolute;top: -3px; left: 260px;">NẠP THẺ</button>
-<p id="check">.</p>
+<button class="btn btn-success" onclick="return alert('Bạn Đã Nạp Thẻ Thành Công!!')"
+        style=" position: absolute;top: -3px; left: 260px;">NẠP THẺ
+</button>
+<p id="check"></p>
 
-<button class="btn btn-success" type="button" onclick="document.getElementById('demo').innerHTML = Date()" style=" position: absolute; left: 620px;" >Đây Là Nút Xem Giờ...Nhé!!!</button>
-<p id="demo" style="text-align: center ;font-family: 'Oleo Script Swash Caps',fantasy ; font-size:30px ; color: aquamarine;position: absolute;top: 100px;left: 400px;"></p>
+<button class="btn btn-success" type="button" onclick="document.getElementById('demo').innerHTML = Date()"
+        style=" position: absolute; left: 620px;">Đây Là Nút Xem Giờ...Nhé!!!
+</button>
+<p id="demo"
+   style="text-align: center ;font-family: 'Oleo Script Swash Caps',fantasy ; font-size:30px ; color: aquamarine;position: absolute;top: 100px;left: 400px;"></p>
 
 <!--<audio controls autoplay>-->
 <!--    <source src="../file/bell.mp3" type="audio/mpeg">-->
 <!--</audio>-->
 
-<button class="btn btn-success" onclick="document.getElementById('id01').style.display='block'" style="width:200px;position: absolute;left: 1221px;">Đăng Ký</button>
+<button class="btn btn-success" onclick="document.getElementById('id01').style.display='block'"
+        style="width:200px;position: absolute;left: 1221px;">Đăng Ký
+</button>
 <div id="id01" class="modal" style="z-index: 100">
-    <form class="modal-content" action="/action_page.php"><br>
-        <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">Đóng</span>
+    <form class="modal-content" action="/action_page.php" style="position: relative; left: 150px"><br>
+        <span onclick="document.getElementById('id02').style.display='none'" class="close"
+              title="Close Modal">Đóng</span>
         <div align="center" class="box-img">
-            <img src="https://i.pinimg.com/564x/48/5f/b6/485fb6b2aafbbfae7b2131a1f9f5688f.jpg" width="300" height="400" alt="Avatar for SignUp">
+            <img src="https://i.pinimg.com/564x/48/5f/b6/485fb6b2aafbbfae7b2131a1f9f5688f.jpg" width="300" height="400"
+                 alt="Avatar for SignUp">
         </div>
-        <h1 style="color: burlywood; text-align: center;font-size: xxx-large ;top: 450px;right: 5px; font-family: 'Oleo Script Swash Caps',serif">Đăng Ký Đi Ngại Gì </h1>
-        <div class="container">
+        <h1 style="color: burlywood; text-align: center;font-size: xxx-large ;top: 450px;right: 5px; font-family: 'Oleo Script Swash Caps',serif">
+            Đăng Ký Đi Ngại Gì </h1>
+        <div class="container" style="position: relative; right: 0px; width: 1100px">
             <p style="text-align: center; color: burlywood;">Hãy Điền Đầy Đủ Thông Tin Vào Phiếu Sau.</p>
             <hr>
             <label for="email"><b>Nhập Email</b></label>
@@ -97,40 +104,49 @@
             <label>
                 <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Nhớ Tài Khoản Của
                 Tôi</label>
-            <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+            <p style="position: relative;top: 115px;left: 368px">By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
             <div class="clearfix">
-                <button type="submit" class="signupbtn" style="inline-size :-webkit-fill-available; width: 1118px">Đăng Ký Tài Khoản</button>
-                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Thôi,Có Tài Khoản Rồi Không Đăng Ký Nữa!!!!</button>
+                <button type="submit" class="signupbtn" style="inline-size :-webkit-fill-available; width: 1100px">Đăng
+                    Ký Tài Khoản
+                </button>
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn" style="position: relative;left: 400px">
+                    Thôi,Có Tài Khoản Rồi Không Đăng Ký Nữa!!!!
+                </button>
             </div>
         </div>
     </form>
 </div>
 
 <br/><br/>
-<button class="btn btn-success" onclick="document.getElementById('id02').style.display='block'" style="width:200px;position: absolute;left: 975px;">Đăng Nhập</button>
+<button class="btn btn-success" onclick="document.getElementById('id02').style.display='block'"
+        style="width:200px;position: absolute;left: 975px;">Đăng Nhập
+</button>
 <div id="id02" class="modal" style="z-index: 100">
 
-    <form class="modal-content animate" action="/action_page.php" method="post">
+    <form class="modal-content animate" action="/action_page.php" method="post" style="position: relative;left: 130px">
         <div class="imgcontainer">
             <img src="https://i.pinimg.com/originals/fe/ba/ea/febaeafc6efd90e86e1dc26f3ae6c3f9.jpg" width="500"
                  height="400" alt="Avatar" class="avatar">
-            <h1 style=" color: burlywood; text-align: center ;font-size: xxx-large ; top: 295px ; left: 660px">Đăng Nhập</h1>
+            <h1 style=" color: burlywood; text-align: center ;font-size: xxx-large ; top: 295px ; left: 660px">Đăng
+                Nhập</h1>
         </div>
 
-        <div class="container">
+        <div class="container" style="position: relative; right: 0px;width: 1100px">
             <label for="uname"><b>Tên Đăng Nhập</b></label>
             <input type="text" placeholder="Enter Username" name="uname" required>
 
             <label for="psw"><b>Mật Khẩu</b></label>
             <input type="password" placeholder="Enter Password" name="psw" required>
 
-            <button type="submit">Đăng Nhập</button>
-            <label>
+            <button type="submit" style="position:relative;left: 300px">Đăng Nhập</button>
+            <label style="position: relative; left: 735px">
                 <input type="checkbox" checked="checked" name="remember"> Nhớ Tài Khoản Của Tôi</label>
         </div>
 
-        <div class="container" style="background-color:#f1f1f1">
-            <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Thôi,Không Đăng Nhập Nữa</button>
+        <div class="container" style="background-color:#f1f1f1; position: relative; right: 17px;width: 1087px">
+            <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn"
+                    style="position:relative; left: 300px">Thôi,Không Đăng Nhập Nữa
+            </button>
             <span class="psw">Quên Mật Khẩu <a href="#">password?</a></span>
         </div>
     </form>
@@ -141,7 +157,7 @@
             <legend style="width: 340pxs ; color: royalblue">ADD PRODUCT</legend>
             <input class="form-control" id="product-name" placeholder="Product Name">
             <input class="form-control" id="product-price" placeholder="Product Price">
-            <input class="form-control" id="product-color" placeholder="Product Color">
+            <input class="form-control" id="product-type" placeholder="Product Type">
             <button type="button" class="btn btn-success" onclick="addProduct()">Add</button>
         </fieldset>
     </form>
@@ -151,84 +167,80 @@
         <legend>EDIT PRODUCT</legend>
         <input class="form-control" id="edit-name" placeholder="Product Name">
         <input class="form-control" id="edit-price" placeholder="Product Price">
-        <input class="form-control" id="edit-color" placeholder="Product Color">
+        <input class="form-control" id="edit-Type" placeholder="Product Type">
         <button type="button" class="btn btn-success" onclick="editProduct()">Save</button>
     </fieldset>
 </form>
 
-<div id="product-manage">
-    <script>
-        let shop = new ProductManage(" Shop Artist ");
-        shop.init();
+<div id="product-manage" style="position: relative; top: -415px;width: 890px"></div>
+<script>
+    let shop = new ProductManage(" Shop Quỳnh Artist ");
+    shop.init();
+    display(shop.getHtml());
+    let currentProduct = 0;
+
+    function display(table) {
+        document.getElementById('product-manage').innerHTML = table;
+        Data.saveData(shop.products, PRODUCT);
+    }
+
+    function addProduct() {
+        let name = document.getElementById("product-name").value;
+        let price = document.getElementById("product-price").value;
+        let type = document.getElementById("product-type").value;
+
+        let product = new Product(name, price, type);
+
+        shop.addProduct(product);
         display(shop.getHtml());
-        let currentProduct = 0;
+        document.getElementById('form-add').reset();
+    }
 
-        function display(table) {
-            document.getElementById('product-manage').innerHTML = table;
-            Data.saveData(store.products, PRODUCT);
+    function edit(index) {
+        document.getElementById('form-edit').style.display = "inline-block";
+        let product = store.getProductByIndex(index);
+        document.getElementById('edit-name').value = product.name;
+        document.getElementById('edit-price').value = product.price;
+        document.getElementById('edit-type').value = product.type;
+        currentProduct = index;
+    }
+
+    function editProduct() {
+        let name = document.getElementById("edit-name").value;
+        let price = document.getElementById("edit-price").value;
+        let type = document.getElementById("edit-type").value;
+
+        shop.products[currentProduct].edit(name, price, type);
+        display(shop.getHtml());
+        document.getElementById('form-edit').reset();
+        document.getElementById('form-edit').style.display = "none";
+    }
+
+    function del(index) {
+        shop.deleteProduct(index);
+        display(shop.getHtml());
+    }
+</script>
+<script>
+    // Get the modal
+    let modal = document.getElementById('id01');
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
         }
+    }
+    // Get the modal
+    let modal = document.getElementById('id02');
 
-        function addProduct() {
-            let name = document.getElementById("product-name").value;
-            let price = document.getElementById("product-price").value;
-            let color = document.getElementById("product-color").value;
-
-            let product = new Product(name, price, color);
-
-            shop.addProduct(product);
-            display(shop.getHtml());
-            document.getElementById('form-add').reset();
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
         }
-
-        function edit(index) {
-            document.getElementById('form-edit').style.display = "inline-block";
-            let product = store.getProductByIndex(index);
-            document.getElementById('edit-name').value = product.name;
-            document.getElementById('edit-price').value = product.price;
-            document.getElementById('edit-color').value = product.color;
-            currentProduct = index;
-        }
-
-        function editProduct() {
-            let name = document.getElementById("edit-name").value;
-            let price = document.getElementById("edit-price").value;
-            let color = document.getElementById("edit-color").value;
-
-            shop.products[currentProduct].edit(name, price, color);
-            display(shop.getHtml());
-            document.getElementById('form-edit').reset();
-            document.getElementById('form-edit').style.display = "none";
-        }
-
-        function del(index) {
-            shop.deleteProduct(index);
-            display(store.getHtml());
-        }
-
-        function checkCard() {
-            document.getElementById('check').value = alert('Ban Da Nap The Thanh Cong Vao Tai Khoan');
-        }
-
-        // Get the modal
-        let modal = document.getElementById('id01');
-
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function (event) {
-            if (event.target === modal) {
-                modal.style.display = "none";
-            }
-        }
-        // Get the modal
-        let modal = document.getElementById('id02');
-
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function (event) {
-            if (event.target === modal) {
-                modal.style.display = "none";
-            }
-        }
-    </script>
-</div>
+    }
+</script>
 <br/> <br/>
 <div class="wrapper typo" id="wrapper">
     <section id="luckywheel" class="hc-luckywheel" style="position: absolute; top: 1700px ; left: 1100px">
@@ -248,24 +260,24 @@
             text: "C1",
             img: "https://i.pinimg.com/564x/83/36/6c/83366c5bfcbf772c86599347e67ed98c.jpg",
             number: 1, // 1%,
-            percentpage: 0.01 // 1%
+            percentpage: 0.1 // 10%
         },
         {
             text: "C2",
             img: "https://i.pinimg.com/564x/e7/a5/a8/e7a5a8f3f26a0e0f186e92f7b7576c9b.jpg",
-            number: 1,
+            number: 2,
             percentpage: 0.5 // 50%
         },
         {
             text: "C3",
             img: "https://i.pinimg.com/564x/8d/bb/6c/8dbb6cbfcadc60361b7230bf14027f50.jpg",
-            number: 1,
+            number: 2,
             percentpage: 0.1 // 10%
         },
         {
             text: "C4",
             img: "https://i.pinimg.com/564x/7f/bc/34/7fbc347ecba69ef1ee90dde5a14c269e.jpg",
-            number: 1,
+            number: 2,
             percentpage: 0.24 // 24%
         },
         {
@@ -280,8 +292,7 @@
             hcLuckywheel.init({
                 id: "luckywheel",
                 config: function (callback) {
-                    callback &&
-                    callback(prizes);
+                    callback && callback(prizes);
                 },
                 mode: "both",
                 getPrize: function (callback) {
@@ -293,6 +304,7 @@
                     if (data == null) {
                         Swal.fire(
                             'Chương trình kết thúc',
+                            'Đã Hết Phần Thưởng',
                             'error'
                         )
                     } else if (data === 'Toang.. Lại Đi !!!') {
